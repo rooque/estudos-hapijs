@@ -8,6 +8,7 @@ const swaggerOptions = {
         title: 'API Documentation',
         version: configFile.ver ,
     },
+    documentationPath: "/docs"
 };
 
 export default async server => {
