@@ -1,0 +1,9 @@
+{
+  "ver": "1",
+  "prod": {
+    "token": "STRONG_TOKEN"
+  },
+  "dev": {
+    "token": "TOK"
+  }
+}
