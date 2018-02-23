@@ -5,6 +5,7 @@ import setupDefRoute from "./routes";
 import { sequelize } from "./db/sqlite";
 import setupGood from "./plugins/good";
 import setupModels from "./model/setup";
+import setupSwagger from "./plugins/swagger";
 
 setupEnv();
 const server = new Hapi.Server({ port: 3000, host: 'localhost' });
@@ -20,6 +21,7 @@ async function setupServer(server) {
 
   // setup plugins
   await setupGood(server);
+  await setupSwagger(server);
 }
 
 async function startServer(server) {
