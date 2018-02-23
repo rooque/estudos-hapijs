@@ -26,8 +26,8 @@ export const createUser = async (request, h) => {
 
 export const findAllUser = async (request, h) => {
   try {
-    const allUsers = await User.findAll();
-    return _map(allUsers, removePassKey);
+    const allUsers = await User.findAll({ attributes : { exclude : ["pass"] } });
+    return allUsers;
   } catch (error) {
     console.error(error);
     const resErr = h.response();
